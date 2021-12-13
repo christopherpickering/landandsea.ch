@@ -1,0 +1,21 @@
+---
+layout: layout.njk
+---
+
+{%  block body %}
+<section class="hero is-fullheight">
+  <div class="hero-body container">
+    <div class="columns is-vcentered">
+      <div class="column is-narrow ">
+        <figure class="image is-128x128 mx-auto">
+          {% image "./src/static/img/me.jpg", "me", "(min-width:600px) 50vw, 100vw", "is-rounded", "eager", "auto" %}
+        </figure>
+      </div>
+      <div class="column">
+        <h1 class="title is-2 has-text-weight-light">Hi, I'm Christopher Pickering</h1>
+        <p class="subtitle">Data Engineer & Full stack developer. On the road.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{%  endblock  %}
