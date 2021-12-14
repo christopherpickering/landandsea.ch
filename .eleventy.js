@@ -49,6 +49,10 @@ module.exports = function(eleventyConfig) {
     "src/robots.txt": "robots.txt"
   });
 
+  eleventyConfig.addPassthroughCopy({
+    "src/favicon.ico": "favicon.ico"
+  });
+
 
   return {
     dir: {
