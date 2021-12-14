@@ -1,1 +1,40 @@
 @import "../../../node_modules/bulma/bulma";
+
+.background {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    opacity: 0.2;
+    overflow:hidden;
+}
+.background > img {
+    min-width:100%;
+    min-height:100%;
+    max-width:unset !important;
+    height:auto;
+    width:auto;
+}
+
+.location {
+    margin-top: 55px;
+    margin-left:50px;
+    margin-right:50px;
+    position:relative
+}
+.location > img {
+    margin-top:-30px;
+}
+.location:after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    height:6px;
+    background:$grey-darker;
+    left:-30px;
+    right:-30px;
+}
+.mail-icon {
+    margin-top:3px;
+}
