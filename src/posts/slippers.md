@@ -66,17 +66,14 @@ Last of all the back can be cutout. Cut out a rectangle that is long enough to r
 
 The top and bottom will be sewn together first. Sew it strong! Everything is sewn inside out... when you do slipper 2, make sure you sew it opposite of slipper 1 so that you do not have 2 slippers for 1 foot :)
 
-<img src="/static/img/slippers/sewing.png" alt="sewing" style="height: 300px;" class="pic">
 {% image "./src/static/img/posts/slippers/sewing.png", "sewing", "(min-width:800px) 50vw, 100vw", "", "lazy", "async" %}
 
 ## Test Fit
 
 The slippers should look something like this.. hopefully!
 
-<img src="/static/img/slippers/complete1.png" alt="complete" style="height: 300px;" class="pic">
 {% image "./src/static/img/posts/slippers/complete1.png", "complete", "(min-width:800px) 50vw, 100vw", "", "lazy", "async" %}
 
 Do they fit?
 
-<img src="/static/img/slippers/complete.png" alt="complete" style="height: 300px;" class="pic">
 {% image "./src/static/img/posts/slippers/complete.png", "complete", "(min-width:800px) 50vw, 100vw", "", "lazy", "async" %}
