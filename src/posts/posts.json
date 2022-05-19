@@ -1,0 +1,10 @@
+{
+  "tags": ["posts"],
+  "layout": "post.njk",
+  "type": "post",
+  "meta": {
+    "author": {
+      "name": "Christopher Pickering"
+    }
+  }
+}

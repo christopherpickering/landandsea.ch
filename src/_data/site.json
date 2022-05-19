@@ -1,5 +1,21 @@
 {
   "title": "Hi, I'm Christopher Pickering",
   "description": "Thanks for visiting my website! Why going.bg? I'm going to Bulgaria. Data engineer & Full stack developer.",
-  "url": "https://going.bg"
+  "url": "https://going.bg",
+  "language": "en",
+  "image": "static/img/me.jpg",
+  "feed": {
+    "subtitle": "Thanks for visiting my website! Why going.bg? I'm going to Bulgaria. Data engineer & Full stack developer.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://going.bg"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://going.bg/feed/feed.json"
+  },
+  "author": {
+    "name": "Christopher Pickering",
+    "url": "https://going.bg/about-me/"
+  }
 }

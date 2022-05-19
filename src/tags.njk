@@ -1,0 +1,38 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: home.njk
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /tags/{{ tag | slug }}/
+title: Tags
+description: List of tags used on Christopher's Tips.
+---
+
+<section class="hero is-fullheight-with-navbar">
+  <div class="hero-body">
+    <div class="container">
+      <div class="level py-5">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h1 class="title is-3 has-text-weight-light">Tips Tagged “{{ tag }}”</h1>
+
+            {% set postslist = collections[ tag ] %}
+            {% include "postslist.njk" %}
+
+            <p>See <a href="{{ '/posts/' | url }}">all</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

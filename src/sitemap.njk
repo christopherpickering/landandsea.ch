@@ -6,9 +6,10 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for page in collections.all %}
        {% if not page.data.draft %}
+        {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
         <url>
-            <loc>{{ site.url }}{{ page.url | url }}</loc>
-            <lastmod>{{ page.date.toISOString() }}</lastmod>
+            <loc>{{ absoluteUrl }}</loc>
+            <lastmod>{{ page.date | htmlDateString }}</lastmod>
             <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
         </url>
         {% endif %}
