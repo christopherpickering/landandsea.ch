@@ -1,5 +1,5 @@
 ---
-title: How To Make This Site
+title: How To Make This Site [Old]
 description: This is a post on My Blog about agile frameworks.
 date: 2020-10-19
 tags:
@@ -10,6 +10,8 @@ tags:
 <div class="notification">
  👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
 </div>
+
+This tutorial was original made for a python static site generator. Since then, this site has moved to the 11ty ssg. The original site can still be found [here](https://christopherpickering.github.io/old.christophers.tips.site/).
 
 This site can be made in a few simple steps -
 
