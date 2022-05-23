@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "1.0.1",
-    "@11ty/eleventy-img": "2.0.0",
+    "@11ty/eleventy-img": "2.0.1",
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
@@ -25,22 +25,22 @@
     "axios": "^0.27.2",
     "bulma": "0.9.4",
     "commitizen": "4.2.4",
-    "cssnano": "5.1.7",
+    "cssnano": "5.1.9",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-critical-css": "1.1.0",
     "eleventy-plugin-metagen": "1.7.8",
     "html-minifier": "4.0.0",
-    "lint-staged": "12.3.8",
+    "lint-staged": "12.4.1",
     "luxon": "^2.4.0",
     "markdown-it": "^13.0.1",
-    "markdown-it-anchor": "^8.6.3",
+    "markdown-it-anchor": "8.6.4",
     "markdown-it-div": "^1.1.0",
     "markdown-it-imsize": "^2.0.1",
     "netlify-lambda": "^2.0.15",
-    "postcss": "8.4.13",
+    "postcss": "8.4.14",
     "postcss-nested": "5.0.6",
     "prettier": "2.6.2",
-    "sass": "1.51.0"
+    "sass": "1.52.1"
   },
   "lint-staged": {
     "**/*.{ts,css,less,scss,js,json,md,yaml,html}": "npm run format"
