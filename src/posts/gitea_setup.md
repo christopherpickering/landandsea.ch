@@ -1,6 +1,6 @@
 ---
 title: Setup Gitea Code Repositories
-description: This is a post on My Blog about agile frameworks.
+description: How to install gitea on an ubuntu server.
 date: 2019-05-26
 tags:
   - code management
@@ -12,7 +12,7 @@ tags:
  👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
 </div>
 
-Special thanks to [Bryan Gilbert](https://bryangilbert.com/post/devops/how-to-setup-gitea-ubuntu/), whos tutorial this writeup is based on.
+Special thanks to [Bryan Gilbert](https://bryangilbert.com/post/devops/how-to-setup-gitea-ubuntu/), whose tutorial this write up is based on.
 
 ## Create Git User
 
@@ -100,7 +100,7 @@ chmod +x gitea
 exit
 ```
 
-The gitea server can be run manually for testing if needed. The installation can be finished at this point as well, but we will wait until nginx is running first.
+The Gitea server can be run manually for testing if needed. The installation can be finished at this point as well, but we will wait until Nginx is running first.
 
 ```bash
 ./gitea web

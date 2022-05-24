@@ -1,6 +1,6 @@
 ---
 title: Setting Up a Mac
-description: This is a post on My Blog about agile frameworks.
+description: How to setup a new mac for web development.
 date: 2019-12-26
 tags:
   - mac
@@ -162,7 +162,7 @@ export LANG=en_US.UTF-8
 
 1. Open Automator
 2. Create new "Quick Action"
-3. Change the first option for "Workflow recieves Current" to "files or folders"
+3. Change the first option for "Workflow receives Current" to "files or folders"
 4. Change application to "Finder"
 5. Add an action - "Get Specified Finder Items"
 6. Add an action - "Run Apple Script"

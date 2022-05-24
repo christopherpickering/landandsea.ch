@@ -1,6 +1,6 @@
 ---
 title: Introduction to Docker
-description: This is a post on My Blog about agile frameworks.
+description: List of basic docker commands I'd like to remember.
 date: 2019-05-25
 tags:
   - another tag
@@ -27,20 +27,45 @@ docker images
 
 ```bash
 docker run <name>
+
+# run with a user and tag
+docker run -i -t -u 0 cp_test:latest
+```
+
+## Launch an Images Shell
+
+```bash
+# list running containers
+docker ps
+
+# connect to it
+docker exec -it <running_cont_id> bash
+
+# or just launch an ubuntu shell directly
+docker run -i -t ubuntu /bin/bash
 ```
 
 ## Inspect Image
 
-````bash
+```bash
 docker inspect <repo:tag or id>
+```
 
 ## Clean Up
 
-### Remove everything
+A few clean up commands:
 
 ```bash
+# Remove everything
 docker prune
-````
+
+# containers
+docker rm $(docker ps -a -q)
+
+# images
+docker rmi $(docker images -q)
+
+```
 
 ### Remove Images by Name
 

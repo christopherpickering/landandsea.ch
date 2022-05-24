@@ -1,6 +1,6 @@
 ---
-title: Moving from MySQL to PostgreSQL on Mac
-description: This is a post on My Blog about agile frameworks.
+title: Moving Django database from MySQL to PostgreSQL on Mac
+description: How to move a Django database from mysql to postgresql using a mac host.
 date: 2019-05-25
 tags:
   - mac
@@ -14,9 +14,9 @@ tags:
 
 ## Moving from MySQL to PostgreSQL on Mac
 
-### Install Postgres with Brew
+### Install PostgreSQL with Brew
 
-First intall postgres
+First install PostgreSQL
 
 ```bash
 brew install postgresql
@@ -28,9 +28,9 @@ Allow ps to auto start
 pg_ctl -D /usr/local/var/postgres start && brew services start postgresql
 ```
 
-### Create Userer and DB
+### Create User and DB
 
-#### Open ps session
+#### Open PostgreSQL session
 
 ```bash
 ## if you need to exit at any time, press ctl+d, or \q
@@ -76,13 +76,13 @@ GRANT ALL PRIVILEGES ON DATABASE databasename TO username;
 
 ### Django Setup
 
-First intall the postgres helper
+First install the PostgreSQL helper
 
 ```bash
 pip install psycopg2-binary
 ```
 
-Next, add the database to settings.py
+Next, add the database to `settings.py`
 
 ```python
 	,
@@ -116,17 +116,17 @@ Export MySQL database to json.
 python manage.py dumpdata --all --natural --indent=4 > dbname.json
 ```
 
-Import json to Postgres
+Import json to PostgreSQL
 
 ```bash
 python manage.py loaddata dbname.json --database=postgresql
 ```
 
-Finally change the default database in settings.py to the postgress connection.
+Finally change the default database in `settings.py` to the PostgreSQL connection.
 
-### Postgres Config
+### PostgreSQL Config
 
-If you installed with homebrew, the config file will be here:
+If you installed with Homebrew, the config file will be here:
 
 ```bash
 /usr/local/var/postgres

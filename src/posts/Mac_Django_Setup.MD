@@ -1,6 +1,6 @@
 ---
 title: Setup a Mac for Django Web Development
-description: This is a post on My Blog about agile frameworks.
+description: Quick introduction to developing with Django websites on a Mac.
 date: 2018-11-02
 tags:
   - django
@@ -54,7 +54,7 @@ mkdir django-project
 cd django-project
 ```
 
-Create a virtual environment. The name venv can be whatver you like.
+Create a virtual environment. The name venv can be whatever you like.
 
 ```bash
 # for python2
@@ -172,7 +172,7 @@ Resolve any errors... here would be a good place to use requirements.txt file :)
 python manage.py migrate
 ```
 
-## Import MySQL Database Fron Server
+## Import MySQL Database From Server
 
 ### Dump the Dababase on the server.
 Login to the server, navigate to where you want to put the dump. Run this.
@@ -181,7 +181,7 @@ Login to the server, navigate to where you want to put the dump. Run this.
 mysqldump -u root -p --opt databasename > databasename.sql
 ```
 
-### Copy the Database to Your New Intall
+### Copy the Database to Your New Install
 
 Next, on your new install (Mac or other server) you can pull in that database.
 

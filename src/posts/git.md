@@ -1,6 +1,6 @@
 ---
 title: How to use Git for code management
-description: This is a post on My Blog about agile frameworks.
+description: List of useful git commands I'd like to remember.
 date: 2018-10-22
 tags:
   - code management
@@ -137,13 +137,13 @@ Add GitHub as a remote
 git remote add origin https://github.com/username/project_name.git
 ```
 
-If you want to change remote or had a spelling mistake (opps)
+If you want to change remote or had a spelling mistake (oops)
 
 ```bash
 git remote rm origin
 git remote add origin https://github.com/username/project_name.git
 
-# to see what the remote is... incase you forgot :)
+# to see what the remote is... in case you forgot :)
 git remote -v
 ```
 

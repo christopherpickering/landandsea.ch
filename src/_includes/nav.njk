@@ -1,21 +1,31 @@
 <nav class="navbar is-transparent">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item is-3 title has-text-weight-light has-text-grey-darker" href="/">go <figure class="location image is-32x32 is-inline-block mx-3">{% image "./src/static/img/location.png", "location", "(min-width:600px) 50vw, 100vw", "", "eager", "auto" %}</figure> <span style="white-space: nowrap;">or go home</span></a>
+      <a class="navbar-item is-3 title mb-0 has-text-weight-light has-text-grey-darker" href="/">go <figure class="location image is-32x32 is-inline-block mx-3">{% image "./src/static/img/location.png", "location", "(min-width:600px) 50vw, 100vw", "", "eager", "auto" %}</figure> <span style="white-space: nowrap;">or go home</span></a>
+      {% if page.url !="/" %}
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="going-bg-nav">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      {% endif %}
     </div>
+
     {% if page.url !="/" %}
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a class="is-flex has-text-grey has-text-weight-medium" href="{{ '/posts/' | url }}"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/tips.png", "tips", "(min-width:30px) 50vw, 100vw", "", "lazy", "async" %}</figure>Tips</a>
+      <div id="going-bg-nav" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="is-flex has-text-grey has-text-weight-medium" href="{{ '/posts/' | url }}"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/tips.png", "tips", "(min-width:30px) 50vw, 100vw", "", "lazy", "async" %}</figure>Tips</a>
+            </div>
+          <div class="navbar-item">
+            <a class="is-flex has-text-grey has-text-weight-medium" href="https://github.com/christopherpickering" target="_blank" rel="noopener"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/github.png", "github", "(min-width:30px) 50vw, 100vw", "", "lazy", "async" %}</figure>GitHub</a>
           </div>
-        <div class="navbar-item">
-          <a class="is-flex has-text-grey has-text-weight-medium" href="https://github.com/christopherpickering" target="_blank" rel="noopener"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/github.png", "github", "(min-width:30px) 50vw, 100vw", "", "lazy", "async" %}</figure>GitHub</a>
-        </div>
-        <div class="navbar-item">
-          <a class="is-flex has-text-grey has-text-weight-medium" href="https://www.linkedin.com/in/christopher-pickering/" target="_blank" rel="noopener"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/linkedin.png", "linkedin", "(min-width:30px) 50vw, 100vw", "", "lazy", "async" %}</figure>LinkedIn</a>
-        </div>
-        <div class="navbar-item">
-          <a class="is-flex has-text-grey has-text-weight-medium" href="mailto:christopher@going.bg"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/mail.png", "email", "(min-width:30px) 50vw, 100vw", "mail-icon", "lazy", "async" %}</figure>Email</a>
+          <div class="navbar-item">
+            <a class="is-flex has-text-grey has-text-weight-medium" href="https://www.linkedin.com/in/christopher-pickering/" target="_blank" rel="noopener"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/linkedin.png", "linkedin", "(min-width:30px) 50vw, 100vw", "", "lazy", "async" %}</figure>LinkedIn</a>
+          </div>
+          <div class="navbar-item">
+            <a class="is-flex has-text-grey has-text-weight-medium" href="mailto:christopher@going.bg"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/mail.png", "email", "(min-width:30px) 50vw, 100vw", "mail-icon", "lazy", "async" %}</figure>Email</a>
+          </div>
         </div>
       </div>
     {% endif %}

@@ -1,16 +1,18 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-{% for post in postslist | reverse %}
-  <li class="my-1 postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    {% if post.data.tags | filterTagList | length > 0 %}
-      <div class="ml-3 tags is-inline-block">
-        {% for tag in post.data.tags | filterTagList %}
-          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-          <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
-        {% endfor %}
-      </div>
-    {% endif %}
-  </li>
-{% endfor %}
-</ol>
+<div class="content">
+  <ul reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+  {% for post in postslist | reverse %}
+    <li class="my-1 postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+      <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      {% if post.data.tags | filterTagList | length > 0 %}
+        <div class="ml-3 tags is-inline-block">
+          {% for tag in post.data.tags | filterTagList %}
+            {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+            <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>

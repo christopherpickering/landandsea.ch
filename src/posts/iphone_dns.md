@@ -1,6 +1,6 @@
 ---
 title: How to Change the DNS Servers on You iPhone
-description: This is a post on My Blog about agile frameworks.
+description: Changing the DNS server on an iPhone.
 date: 2020-05-06
 tags:
   - iphone

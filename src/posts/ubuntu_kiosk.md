@@ -1,6 +1,6 @@
 ---
 title: Create a Basic Ubuntu Web Kiosk
-description: This is a post on My Blog about agile frameworks.
+description: Building a web kiosk from an ubuntu mini pc.
 date: 2018-12-17
 tags:
   - ubuntu
@@ -51,7 +51,7 @@ While in the BIOS we will change the PC to auto boot when there is a power failu
 
 1. Select Install UBUNTU from the menu
 2. After selecting language, select the option for Minimal installation
-3. Select option to Erase disk and insatll Ubuntu
+3. Select option to Erase disk and install Ubuntu
 4. Create an Admin user with pass you will not forget
    :::
 
@@ -82,7 +82,7 @@ sudo visudo
 # add this to the end of file
 kiosk ALL=(ALL) NOPASSWD: ALL
 
-# fianlly reboot as kiosk user for remaining changes.
+# finally reboot as kiosk user for remaining changes.
 # if everything worked the user should auto login.
 sudo reboot
 ```
@@ -154,24 +154,24 @@ Open dconf. Navigate to org > gnome > desktop > remote-access
 
 ::: content
 
-- Turn of require encription
-- chang auth method to vnc
+- Turn of require encryption
+- Change auth method to vnc
   :::
 
 Restart for changes to work.
 
-## Create firefox startup script
+## Create Firefox startup script
 
 This piece of the setup is done in the kiosk user section.
 
 ### Create Firefox Startup Script
 
-In Termiinal:
+In Terminal:
 
 ```bash
 nano ~/Desktop/firefox.sh
 
-# add this to the file and save. This will enable gestures in firefox.
+# add this to the file and save. This will enable gestures in Firefox.
 # sleep for 30 seconds so internet can connect
 sleep 30s
 MOZ_USE_XINPUT2=1 /usr/bin/firefox
@@ -188,13 +188,13 @@ Search start menu for startup applications and add `~/Desktop/firefox.sh` as the
 
 ## Change Firefox settings
 
-### Change diplay settings
+### Change display settings
 
 ::: content
 
 - Change homepage to http://backoffice/
 - Turn off all homepage features
-- Install AutoFullscreen extension to put firefox in full screen mode when opened.
+- Install AutoFullscreen extension to put Firefox in full screen mode when opened.
   :::
 
 ### Change PDF Settings
@@ -211,13 +211,13 @@ change "sidebarViewOnLoad" to 4
 
 ### Do not reopen tabs on crash
 
-When firefox starts we always want the home page, do not attempt to reopen any tabs.
+When Firefox starts we always want the home page, do not attempt to reopen any tabs.
 
-Seach for session. change browser.sessionstore.resume_from_crash to False.
+Search for session. change `browser.sessionstore.resume_from_crash` to `False`.
 
 ## Other Settings
 
-### Turn on On Screen Keybaord
+### Turn on On Screen Keyboard
 
 Settings > Universal Access > Screen Keyboard > On
 

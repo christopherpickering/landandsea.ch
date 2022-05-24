@@ -1,6 +1,6 @@
 ---
 title: Homemade Slippers
-description: This is a post on My Blog about agile frameworks.
+description: Making slippers from an old wool sweater.
 date: 2019-05-16
 tags:
   - projects

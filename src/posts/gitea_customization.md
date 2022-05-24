@@ -1,6 +1,6 @@
 ---
 title: How to Customize Gitea
-description: This is a post on My Blog about agile frameworks.
+description: Customizing a new install of gitea.
 date: 2019-05-26
 tags:
   - code management

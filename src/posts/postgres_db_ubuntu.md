@@ -1,6 +1,6 @@
 ---
 title: Migrating from MySQL to Postgres on Ubuntu Server
-description: This is a post on My Blog about agile frameworks.
+description: How to move a Django database from mysql to postgresql on an ubuntu server.
 date: 2018-12-19
 tags:
   - ubuntu
@@ -71,7 +71,7 @@ GRANT ALL PRIVILEGES ON DATABASE databasename TO username;
 
 ## Django Setup
 
-First intall the postgres helper
+First install the PostgreSQL helper
 
 ```bash
 pip install psycopg2-binary
@@ -116,7 +116,7 @@ Import json to Postgres
 python manage.py loaddata dbname.json --database=postgresql
 ```
 
-Finally change the default database in settings.py to the postgress connection.
+Finally change the default database in `settings.py` to the PostgreSQL connection.
 
 ## Tips
 
@@ -128,7 +128,7 @@ sudo service postgresql restart
 
 ### Tuning
 
-Edit conf file. You can start a session with postgres and run `SHOW config_file;` to see its location.
+Edit conf file. You can start a session with PostgreSQL and run `SHOW config_file;` to see its location.
 
 ```bash
 sudo nano /etc/postgresql/10/main/postgresql.conf

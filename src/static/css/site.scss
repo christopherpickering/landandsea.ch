@@ -36,10 +36,55 @@
 .hero.is-fullheight-with-navbar {
   min-height: calc(100vh - 64px);
 }
+.navbar-burger {
+  height: auto;
+}
+.navbar-burger span {
+  height: 2px;
+  width: 20px;
+}
+.postlist {
+  list-style: none !important;
+  margin-left: 0 !important;
+}
 
 /* purgecss start ignore */
+
+// reset number
+pre[class*='language-'] .number {
+  align-items: unset;
+  background-color: unset;
+  border-radius: unset;
+  display: unset;
+  font-size: unset;
+  height: unset;
+  justify-content: unset;
+  margin-right: unset;
+  min-width: unset;
+  padding: unset;
+  text-align: unset;
+  vertical-align: unset;
+}
+pre[class*='language-'] .tag {
+  align-items: unset;
+  background-color: unset;
+  border-radius: unset;
+  color: unset;
+  display: unset;
+  font-size: unset;
+  height: unset;
+  justify-content: unset;
+  line-height: unset;
+  padding-left: unset;
+  padding-right: unset;
+  white-space: unset;
+}
+
 pre[class*='language-'] {
   border-radius: $radius;
+}
+pre code[class*='language-'] {
+  padding: 0;
 }
 /* PrismJS 1.28.0
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash+lua+python+sql */

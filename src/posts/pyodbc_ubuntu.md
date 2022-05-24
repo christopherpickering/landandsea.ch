@@ -1,6 +1,6 @@
 ---
-title: Installing Pyodbc on Ubuntu Server
-description: This is a post on My Blog about agile frameworks.
+title: Installing Pyodbc on Ubuntu Server - Oracle Database
+description: Short guide on installing python package pyodbc on an Ubuntu server in order to connect to Oracle databases.
 date: 2019-03-21
 tags:
   - ubuntu

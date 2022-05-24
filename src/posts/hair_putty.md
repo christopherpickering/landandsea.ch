@@ -1,6 +1,6 @@
 ---
 title: How To Make Hairputty
-description: This is a post on My Blog about agile frameworks.
+description: How to make a non greasy hair putty from a few simple ingrediants.
 date: 2019-12-21
 tags:
   - hairputty

@@ -1,6 +1,6 @@
 ---
 title: How To Use VPN on an Intranet
-description: This is a post on My Blog about agile frameworks.
+description: How to connect to a vpn while on an intranet network.
 date: 2019-06-02
 tags:
   - vpn
@@ -20,7 +20,7 @@ These steps will help to make a VPN doable
 ::: content
 
 - [ProtonVPN](https://protonvpn.com)
-- [Helm](https://apps.apple.com/us/app/helm-hosts-file-manager/id1099472017?mt=12) or another hosts manager
+- [Helm](https://apps.apple.com/us/app/helm-hosts-file-manager/id1099472017?mt=12), [SwitchHosts](https://swh.app), or another hosts manager
   :::
 
 ## How To
@@ -31,7 +31,7 @@ First install ProtonVPN and Helm.
 
 ProtonVPN is the VPN of our choice.
 
-Helm is used to easly manage hosts. We can have several profiles in there.
+Helm is used to easily manage hosts. We can have several profiles in there.
 
 ### Create Network Routes
 
@@ -39,7 +39,7 @@ When you are running a VPN all network traffic is routed out to the VPN host. Th
 
 Thankfully your mac has an option to router network traffic to specific hosts and bypass the VPN if needed!
 
-A network route can be easily added. Heres an example that will reroute all 10.x.x.x traffic through 11.0.0.1:
+A network route can be easily added. Here's an example that will reroute all 10.x.x.x traffic through 11.0.0.1:
 
 ```bash
 sudo route -n add -net 10.0.0.0 11.0.0.1
@@ -86,7 +86,7 @@ chmod +x route_script
 
 #### Add plist To Run Script on Startup
 
-The plist needs to be in ` /Library/LaunchDaemons` to be pickedup.
+The plist needs to be in ` /Library/LaunchDaemons` to be picked up.
 
 ```bash
 nano /Library/LaunchDaemons/com.route_script.plist

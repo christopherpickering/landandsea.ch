@@ -1,6 +1,6 @@
 ---
 title: How to Install CX_Oracle on Mac
-description: This is a post on My Blog about agile frameworks.
+description: How to install cx_oracle on a Mac for connecting to oracle databases.
 date: 2018-11-01
 tags:
   - mac
@@ -16,7 +16,7 @@ tags:
 
 ## Install Python
 
-CX Oracle will not work with the mac bundled python. Install python with homebrew.
+CX Oracle will not work with the mac bundled python. Install python with Homebrew.
 
 ```bash
 brew install python3
@@ -45,14 +45,14 @@ sudo mkdir -p /opt/oracle
 
 Move the unzipped download into that folder.
 
-Add links to the /lib folder to make cx_oracle accessable.
+Add links to the `/lib` folder to make `cx_oracle` accessible.
 
 ```bash
 mkdir ~/lib
 ln -s /opt/oracle/instantclient_12_2/libclntsh.dylib.12.1 ~/lib/
 ```
 
-Create the folder for the tnsnames.ora file.
+Create the folder for the `tnsnames.ora` file.
 
 ```bash
 mkdir -p /opt/oracle/instantclient_12_2/network/admin

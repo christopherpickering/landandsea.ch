@@ -1,6 +1,6 @@
 ---
 title: How To Make This Site [Old]
-description: This is a post on My Blog about agile frameworks.
+description: How to make a static website using a homemade python based static site generator.
 date: 2020-10-19
 tags:
   - about
@@ -11,7 +11,7 @@ tags:
  👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
 </div>
 
-This tutorial was original made for a python static site generator. Since then, this site has moved to the 11ty ssg. The original site can still be found [here](https://christopherpickering.github.io/old.christophers.tips.site/).
+This tutorial was original made for a python static site generator. Since then, this site has moved to the [11ty ssg](https://www.11ty.dev). The original site can still be found [here](https://christopherpickering.github.io/old.christophers.tips.site/).
 
 This site can be made in a few simple steps -
 
@@ -39,10 +39,10 @@ mv 'christophers.tips' 'myproject'
 cd myproject
 virtualenv venv
 
-# activate
+# activate (you do have python installed, right?)
 source venv/bin/activate
 
-# install packages
+# install a few packages
 pip install jinja2
 pip install markdown2
 pip install pigments
@@ -71,11 +71,11 @@ git remote add origin /path/to/remote
 
 ## Add content
 
-First, update the book.json file to your site information.
+First, update the `book.json` file to your site information.
 
-The home page is top level in the directory - index.md. Any other page for the site is in the pages/ directory.
+The home page is top level in the directory - `index.md`. Any other page for the site is in the `pages/` directory.
 
-After adding a new page the book.json file needs to be updated to include the new page in the menu.
+After adding a new page the `book.json` file needs to be updated to include the new page in the menu.
 
 When you are ready to publish your content, be sure the virtual environment is active. Then run the update script.
 

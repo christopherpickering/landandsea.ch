@@ -126,6 +126,7 @@ module.exports = function (eleventyConfig) {
     h6: 'title is-5',
     p: 'block',
     table: 'table',
+    blockquote: 'notification mx-0',
   };
 
   // Customize Markdown library and settings:

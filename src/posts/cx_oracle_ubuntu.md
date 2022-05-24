@@ -1,6 +1,6 @@
 ---
 title: Setting Up Cx_Oracle on Linux/Ubuntu
-description: This is a post on My Blog about agile frameworks.
+description: How to install and set up cx_oracle on an ubuntu server.
 date: 2020-10-19
 tags:
   - ubuntu
@@ -12,7 +12,7 @@ tags:
  👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
 </div>
 
-[Cx_Oracle Docs](https://cx-oracle.readthedocs.io/en/latest/installation.html)
+Further reading: [Cx_Oracle Docs](https://cx-oracle.readthedocs.io/en/latest/installation.html)
 
 ## Download Instant Client
 
@@ -21,12 +21,13 @@ On host computer (Mac in this case) [download](https://www.oracle.com/technetwor
 oracle-instantclient18.3-basic-18.3.0.0.0-1.x86_64.rpm
 oracle-instantclient18.3-devel-18.3.0.0.0-1.x86_64.rpm
 
-Put the files in a known directory. In my case I put the files in ~/Documents/Projects/Oracle
+Put the files in a known directory. In my case I put the files in `~/Documents/Projects/Oracle`
 
 ## Move Instant Client files to Server
 
-Login to the server. Run this command to copy the full Oracle directory with both rpn's from the Mac host to the server.
-On the Mac host don't forget to allow ssh connections. "System Preferences" > "Sharing" > "Remote Login" > "On"
+Login to the server. Run a scp command to copy the full Oracle directory with both rpn's from the Mac host to the server.
+
+> On the Mac you may need to allow ssh connections. "System Preferences" > "Sharing" > "Remote Login" > "On"
 
 ```bash
 sudo mkdir /home/Oracle

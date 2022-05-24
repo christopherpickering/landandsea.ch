@@ -3,38 +3,32 @@ layout: layout.njk
 templateClass: tmpl-post
 ---
 
-<section class="hero is-fullheight-with-navbar">
-  <div class="hero-body">
-    <div class="container">
-      <div class="level py-5">
-        <main {% if templateClass %} class="{{ templateClass }}"{% endif %}>
-          <h1 class="title is-1">{{ title }}</h1>
-          <time class="mb-3 is-inline-block" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+<section class="section pt-2">
+  <div class="container">
+    <h1 class="title is-1">{{ title }}</h1>
+    <time class="mb-3 is-inline-block" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 
-          {% if tags | length > 0 %}
-            | <div class="tags is-inline-block ml-3">
-              {%- for tag in tags | filterTagList -%}
-                {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-                <a href="{{ tagUrl | url }}" class="tag is-rounded">{{ tag }}</a>
-              {%- endfor %}
-            </div>
-          {% endif %}
-
-          {{ content | safe }}
-
-          {%- if collections.posts %}
-            {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-            {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-            {%- if nextPost or previousPost %}
-              <hr>
-              <ul>
-                {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-                {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-              </ul>
-            {%- endif %}
-          {%- endif %}
-        </main>
+    {% if tags | length > 0 %}
+      | <div class="tags is-inline-block ml-3">
+        {%- for tag in tags | filterTagList -%}
+          {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+          <a href="{{ tagUrl | url }}" class="tag is-rounded">{{ tag }}</a>
+        {%- endfor %}
       </div>
-    </div>
+    {% endif %}
+
+    {{ content | safe }}
+
+    {%- if collections.posts %}
+      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+      {%- if nextPost or previousPost %}
+        <hr>
+        <ul>
+          {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+          {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+        </ul>
+      {%- endif %}
+    {%- endif %}
   </div>
 </section>

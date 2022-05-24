@@ -1,6 +1,6 @@
 ---
 title: How to print Barcodes in Excel
-description: This is a post on My Blog about agile frameworks.
+description: Barcode printing tips
 date: 2018-11-30
 tags:
   - another tag

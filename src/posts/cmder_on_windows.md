@@ -1,6 +1,6 @@
 ---
 title: Setting Up CMDER on Windows 10
-description: This is a post on My Blog about agile frameworks.
+description: Setting up cmder on a Windows 10 PC to have a nice looking terminal.
 date: 2019-07-02
 tags:
   - cmder

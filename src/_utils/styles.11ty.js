@@ -25,9 +25,9 @@ module.exports = class {
       require('postcss-nested'),
       purgecss({
         content: ['./src/**/*.njk', './src/**/*.md'],
-        // safelist: {
-        //         deep: [/pre/],
-        //       }
+        safelist: {
+          deep: [/mx-0/],
+        },
       }),
       require('autoprefixer'),
       require('cssnano'),

@@ -1,6 +1,6 @@
 ---
-title: Installing Pyodbc on a Mac
-description: This is a post on My Blog about agile frameworks.
+title: Installing Pyodbc on a Mac - Oracle Database
+description: Installing Pyodbc on a mac for connecting to oracle databases.
 date: 2019-12-14
 tags:
   - mac
@@ -17,7 +17,7 @@ tags:
 
 ### Install Homebrew
 
-If homebrew is not installed, get that first.
+If Homebrew is not installed, get that first.
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -30,7 +30,7 @@ brew install freetds
 
 ## Configure TDS Connection Information
 
-Edit the file /usr/local/etc/freetds.conf
+Edit the file `/usr/local/etc/freetds.conf`
 
 ```bash
 nano /usr/local/etc/freetds.conf
@@ -53,7 +53,7 @@ tsql -S <connection_name> -U <username> -P <password>
 
 ## Add TDS Connection info to the ODBC driver list
 
-Run odbcinst -j to find the file directories for odbcinst.ini and odbc.ini
+Run odbcinst -j to find the file directories for `odbcinst.ini` and `odbc.ini`
 
 Update odbcinst.ini to include the info below.
 
@@ -72,7 +72,7 @@ UsageCount=1
 # control x to save
 ```
 
-Next, edit the odbc.ini file.
+Next, edit the `odbc.ini` file.
 
 Add the following info.
 
@@ -92,7 +92,7 @@ Servername          = <connection_name>
 
 ## Install pyodbc
 
-Finally, pyodbc for python can be installed
+Finally, `pyodbc` for python can be installed
 
 ```bash
 pip install pyodbc
