@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "autoprefixer": "10.4.7",
     "axios": "0.27.2",
     "bulma": "0.9.4",
-    "commitizen": "4.2.4",
+    "commitizen": "4.2.5",
     "cssnano": "5.1.12",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-critical-css": "1.1.0",
