@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.40",
+  "version": "1.0.41",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,15 +22,15 @@
     "@quasibit/eleventy-plugin-schema": "1.10.0",
     "@toycode/markdown-it-class": "1.2.4",
     "autoprefixer": "10.4.13",
-    "axios": "1.2.0",
+    "axios": "1.2.1",
     "bulma": "0.9.4",
-    "commitizen": "4.2.5",
+    "commitizen": "4.2.6",
     "cssnano": "5.1.14",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-critical-css": "1.1.0",
     "eleventy-plugin-metagen": "1.7.11",
     "html-minifier": "4.0.0",
-    "lint-staged": "13.0.4",
+    "lint-staged": "13.1.0",
     "luxon": "3.1.1",
     "markdown-it": "13.0.1",
     "markdown-it-anchor": "8.6.5",
@@ -39,8 +39,8 @@
     "netlify-lambda": "2.0.15",
     "postcss": "8.4.19",
     "postcss-nested": "6.0.0",
-    "prettier": "2.8.0",
-    "sass": "1.56.1"
+    "prettier": "2.8.1",
+    "sass": "1.56.2"
   },
   "lint-staged": {
     "**/*.{ts,css,less,scss,js,json,md,yaml,html}": "npm run format"
