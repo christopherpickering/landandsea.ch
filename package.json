@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.45",
+  "version": "1.0.46",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -37,9 +37,9 @@
     "markdown-it-div": "1.1.0",
     "markdown-it-imsize": "2.0.1",
     "netlify-lambda": "2.0.15",
-    "postcss": "8.4.20",
+    "postcss": "8.4.21",
     "postcss-nested": "6.0.0",
-    "prettier": "2.8.1",
+    "prettier": "2.8.2",
     "sass": "1.57.1"
   },
   "lint-staged": {
