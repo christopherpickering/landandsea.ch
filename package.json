@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.46",
+  "version": "1.0.47",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,9 @@
     "@quasibit/eleventy-plugin-schema": "1.10.0",
     "@toycode/markdown-it-class": "1.2.4",
     "autoprefixer": "10.4.13",
-    "axios": "1.2.2",
+    "axios": "1.2.3",
     "bulma": "0.9.4",
-    "commitizen": "4.2.6",
+    "commitizen": "4.3.0",
     "cssnano": "5.1.14",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-critical-css": "1.1.0",
@@ -39,7 +39,7 @@
     "netlify-lambda": "2.0.15",
     "postcss": "8.4.21",
     "postcss-nested": "6.0.0",
-    "prettier": "2.8.2",
+    "prettier": "2.8.3",
     "sass": "1.57.1"
   },
   "lint-staged": {
