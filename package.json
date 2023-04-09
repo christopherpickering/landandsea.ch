@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.61",
+  "version": "1.0.62",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "@quasibit/eleventy-plugin-schema": "1.11.0",
     "@toycode/markdown-it-class": "1.2.4",
     "autoprefixer": "10.4.14",
-    "axios": "1.3.4",
+    "axios": "1.3.5",
     "bulma": "0.9.4",
     "commitizen": "4.3.0",
     "cssnano": "6.0.0",
