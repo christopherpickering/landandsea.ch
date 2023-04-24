@@ -27,7 +27,7 @@ eleventyNavigation:
                 <div class="tags">
                 {% for tag in collections.tagList %}
                   {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-                  <a href="{{ tagUrl | url }}" class="tag umami--click--tags-{{ tag }}">{{ tag }}</a>
+                  <a href="{{ tagUrl | url }}" class="tag" data-umami-event="tags-{{ tag }}">{{ tag }}</a>
                 {% endfor %}
               </div>
               {% endif %}

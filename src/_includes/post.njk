@@ -12,7 +12,7 @@ templateClass: tmpl-post
       | <div class="tags is-inline-block ml-3">
         {%- for tag in tags | filterTagList -%}
           {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-          <a href="{{ tagUrl | url }}" class="tag is-rounded umami--click--tag-{{ tag }}">{{ tag }}</a>
+          <a href="{{ tagUrl | url }}" class="tag is-rounded" data-umami-event="tag-{{ tag }}">{{ tag }}</a>
         {%- endfor %}
       </div>
     {% endif %}
@@ -25,8 +25,8 @@ templateClass: tmpl-post
       {%- if nextPost or previousPost %}
         <hr>
         <ul>
-          {%- if nextPost %}<li>Next: <a class="umami--click--post-{{ nextPost.data.title | slugify }}" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-          {%- if previousPost %}<li>Previous: <a class="umami--click--post-{{ previousPost.data.title | slugify }}" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+          {%- if nextPost %}<li>Next: <a data-umami-event="umami--click--post-{{ nextPost.data.title | slugify }}" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+          {%- if previousPost %}<li>Previous: <a data-umami-event="umami--click--post-{{ previousPost.data.title | slugify }}" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
         </ul>
       {%- endif %}
     {%- endif %}

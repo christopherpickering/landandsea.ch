@@ -29,7 +29,7 @@ description: List of tags used on Christopher's Tips.
             {% set postslist = collections[ tag ] %}
             {% include "postslist.njk" %}
 
-            <p>See <a class="umami--click--tags-{{ tag }}" href="{{ '/posts/' | url }}">all</a>.</p>
+            <p>See <a data-umami-event="tags-{{ tag }}" href="{{ '/posts/' | url }}">all</a>.</p>
           </div>
         </div>
       </div>
