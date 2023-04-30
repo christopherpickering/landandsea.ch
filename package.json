@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.66",
+  "version": "1.0.67",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "eleventy-critical-css": "1.1.0",
     "eleventy-plugin-metagen": "1.7.11",
     "html-minifier": "4.0.0",
-    "lint-staged": "13.2.1",
+    "lint-staged": "13.2.2",
     "luxon": "3.3.0",
     "markdown-it": "13.0.1",
     "markdown-it-anchor": "8.6.7",
@@ -40,7 +40,7 @@
     "postcss": "8.4.23",
     "postcss-nested": "6.0.1",
     "prettier": "2.8.7",
-    "sass": "1.62.0"
+    "sass": "1.62.1"
   },
   "lint-staged": {
     "**/*.{ts,css,less,scss,js,json,md,yaml,html}": "npm run format"
