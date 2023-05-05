@@ -50,7 +50,6 @@ $LOGIN_PASSWORD
 EOT
 ```
 
-
 ## Change the secutiry method for SMPT
 
 This is optional. Change the SMTP security from TTL to SSL if needed for your sender.
@@ -97,4 +96,3 @@ use_ssl=True
 username=<your proton email address>
 password=$EMAIL_RELAY_PASSWORD
 ```
-

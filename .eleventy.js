@@ -50,20 +50,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(editOnGithub,
-    {
-        // required
-        github_edit_repo:"https://github.com/christopherpickering/going-bg",
-        // optional: defaults
-        github_edit_branch: "master",
-        github_edit_text: "Edit on Github", // html accepted
-        github_edit_class: "edit-on-github",
-        github_edit_tag: "a",
-        github_edit_attributes: 'target="_blank" rel="noopener"',
-        github_edit_wrapper: undefined //ex: "<div stuff>${edit_on_github}</div>"
-    });
-
-
+  eleventyConfig.addPlugin(editOnGithub, {
+    // required
+    github_edit_repo: 'https://github.com/christopherpickering/going-bg',
+    // optional: defaults
+    github_edit_branch: 'master',
+    github_edit_text: 'Edit on Github', // html accepted
+    github_edit_class: 'edit-on-github',
+    github_edit_tag: 'a',
+    github_edit_attributes: 'target="_blank" rel="noopener"',
+    github_edit_wrapper: undefined, //ex: "<div stuff>${edit_on_github}</div>"
+  });
 
   // copy font
   eleventyConfig.addPassthroughCopy({
