@@ -1,5 +1,4 @@
 const Image = require('@11ty/eleventy-img');
-const criticalCss = require('eleventy-critical-css');
 const metagen = require('eleventy-plugin-metagen');
 const fs = require('fs');
 const schema = require('@quasibit/eleventy-plugin-schema');
@@ -39,17 +38,21 @@ async function imageShortcode(
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addWatchTarget('./src/static/');
+  eleventyConfig.addWatchTarget('./styles/global.css');
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
   eleventyConfig.addTransform(
     'htmlmin',
     require('./src/_utils/minify-html.js'),
   );
   eleventyConfig.addPlugin(metagen);
-  eleventyConfig.addPlugin(criticalCss);
   eleventyConfig.addPlugin(schema);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    preAttributes: {
+      class: ({ language }) => `rounded language-${language || 'plain'}`,
+    },
+  });
   eleventyConfig.addPlugin(editOnGithub, {
     // required
     github_edit_repo: 'https://github.com/christopherpickering/going-bg',
@@ -62,6 +65,9 @@ module.exports = function (eleventyConfig) {
     github_edit_wrapper: undefined, //ex: "<div stuff>${edit_on_github}</div>"
   });
 
+  eleventyConfig.addShortcode('version', function () {
+    return String(Date.now());
+  });
   // copy font
   eleventyConfig.addPassthroughCopy({
     './node_modules/@fontsource/inter/files': 'static/font/inter/files',
@@ -99,9 +105,9 @@ module.exports = function (eleventyConfig) {
   });
 
   function filterTagList(tags) {
-    return (tags || []).filter(
-      (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1,
-    );
+    return (tags || [])
+      .filter((tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1)
+      .sort((a, b) => a - b);
   }
 
   eleventyConfig.addFilter('filterTagList', filterTagList);
@@ -129,15 +135,16 @@ module.exports = function (eleventyConfig) {
   });
 
   const mapping = {
-    h1: 'title is-1',
-    h2: 'title is-2',
-    h3: 'title is-3',
-    h4: 'title is-4',
-    h5: 'title is-5',
-    h6: 'title is-5',
-    p: 'block',
+    h1: 'text-2xl font-light text-slate-800 py-3',
+    h2: 'text-xl font-light text-slate-800 py-3',
+    h3: 'text-lg font-light text-slate-800 py-3',
+    h4: 'font-light text-slate-800 py-3',
+    h5: 'font-light text-slate-800 py-3',
+    h6: 'font-light text-slate-800 py-3',
+    p: 'py-3',
     table: 'table',
-    blockquote: 'notification mx-0',
+    pre: 'rounded',
+    blockquote: 'rounded p-4 border',
   };
 
   // Customize Markdown library and settings:
@@ -150,7 +157,7 @@ module.exports = function (eleventyConfig) {
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.linkInsideHeader({
         placement: 'before',
-        class: 'direct-link',
+        class: 'text-blue-600',
         symbol: '∞',
         level: [2, 3, 4, 5],
       }),

@@ -1,18 +1,18 @@
-<div class="content">
+
   <ul reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
   {% for post in postslist | reverse %}
-    <li class="my-1 postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-      <a href="{{ post.url | url }}" class="postlist-link" data-umami-event="post-{{ post.data.title | slugify }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    <li class="my-1 flex items-center flex-wrap {% if post.url == url %} postlist-item-active{% endif %}">
+      <a href="{{ post.url | url }}" class="text-blue-700 mr-2" data-umami-event="post-{{ post.data.title | slugify }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      <time class="" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       {% if post.data.tags | filterTagList | length > 0 %}
-        <div class="ml-3 tags is-inline-block">
+        <div class="flex flex-wrap">
           {% for tag in post.data.tags | filterTagList %}
             {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="tag" data-umami-event="tag-{{ tag }}">{{ tag }}</a>
+            <a href="{{ tagUrl | url }}" class="rounded-md bg-white/50 border px-2 m-1 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50" >{{ tag }}</a>
           {% endfor %}
         </div>
       {% endif %}
     </li>
   {% endfor %}
   </ul>
-</div>
+

@@ -3,19 +3,20 @@ layout: layout.njk
 templateClass: tmpl-post
 ---
 
-<section class="section pt-2">
-  <div class="container">
-    <h1 class="title is-1">{{ title }}</h1>
-    <time class="mb-3 is-inline-block" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-
+<section class="grow flex py-6">
+  <div class="container mx-auto">
+  <div class="flex justify-between pb-4">
+    <h1 class="text-2xl font-light text-slate-800 flex items-center space-x-2">{{ title }}</h1>
     {% if tags | length > 0 %}
-      | <div class="tags is-inline-block ml-3">
+      <div class="flex flex-wrap">
         {%- for tag in tags | filterTagList -%}
           {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-          <a href="{{ tagUrl | url }}" class="tag is-rounded" data-umami-event="tag-{{ tag }}">{{ tag }}</a>
+          <a href="{{ tagUrl | url }}" class="rounded-md bg-white/50 border px-2 m-1 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50" >{{ tag }}</a>
         {%- endfor %}
       </div>
     {% endif %}
+    </div>
+    <time class="block mb-4 text-slate-600" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 
     {{ content | safe }}
 
@@ -23,10 +24,10 @@ templateClass: tmpl-post
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
       {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
       {%- if nextPost or previousPost %}
-        <hr>
+        <hr class="my-4">
         <ul>
-          {%- if nextPost %}<li>Next: <a data-umami-event="umami--click--post-{{ nextPost.data.title | slugify }}" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-          {%- if previousPost %}<li>Previous: <a data-umami-event="umami--click--post-{{ previousPost.data.title | slugify }}" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+          {%- if nextPost %}<li>Next: <a class="text-blue-700" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+          {%- if previousPost %}<li>Previous: <a class="text-blue-700" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
         </ul>
       {%- endif %}
     {%- endif %}

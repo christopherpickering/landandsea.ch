@@ -4,7 +4,7 @@ description: Using Protonmail Bridge in automation pipelines can easily be done 
 date: 2022-11-30
 tags:
   - Protonmail
-  - Docker
+  - docker
   - GitHub actions
 ---
 

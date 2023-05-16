@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ELEVENTY_PRODUCTION=true eleventy",
-    "start": "ELEVENTY_PRODUCTION=true eleventy --serve --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i styles/global.css -c styles/tailwind.config.js -o _site/style.css --minify",
+    "start": "run-p 11ty:start tailwind:process",
+    "11ty:start": "ELEVENTY_PRODUCTION=true  eleventy --serve --watch",
     "format": "prettier --config .prettierrc \"**/*.{ts,css,less,scss,js,json,md,yaml,yml,html}\" --write",
     "pre-commit": "lint-staged",
-    "commit": "node_modules/.bin/netlify-lambda build functions && git add . && npm run pre-commit && cz --no-verify"
+    "commit": "node_modules/.bin/netlify-lambda build functions && git add . && npm run pre-commit && cz --no-verify",
+    "tailwind:process": "npx tailwindcss -i styles/global.css -c styles/tailwind.config.js -o _site/style.css --watch"
   },
   "author": "Christopher Pickering",
   "license": "ISC",
@@ -18,16 +20,13 @@
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
-    "@fullhuman/postcss-purgecss": "5.0.0",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@quasibit/eleventy-plugin-schema": "1.11.0",
     "@toycode/markdown-it-class": "1.2.4",
     "autoprefixer": "10.4.14",
     "axios": "1.4.0",
-    "bulma": "0.9.4",
     "commitizen": "4.3.0",
-    "cssnano": "6.0.1",
     "cz-conventional-changelog": "3.3.0",
-    "eleventy-critical-css": "1.1.0",
     "eleventy-plugin-metagen": "1.7.11",
     "html-minifier": "4.0.0",
     "lint-staged": "13.2.2",
@@ -37,10 +36,12 @@
     "markdown-it-div": "1.1.0",
     "markdown-it-imsize": "2.0.1",
     "netlify-lambda": "2.0.16",
-    "postcss": "8.4.23",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
     "postcss-nested": "6.0.1",
     "prettier": "2.8.8",
-    "sass": "1.62.1"
+    "tailwindcss": "^3.3.2"
   },
   "lint-staged": {
     "**/*.{ts,css,less,scss,js,json,md,yaml,html}": "npm run format"

@@ -1,20 +1,11 @@
-<nav class="navbar is-transparent">
-  <div class="container">
-    <div class="navbar-brand">
-      <a class="navbar-item is-3 title mb-0 has-text-weight-light has-text-grey-darker" href="/">go <figure class="location image is-32x32 is-inline-block mx-3">{% image "./src/static/img/location.png", "big", "(min-width:600px) 50vw, 100vw", "", "eager", "auto" %}</figure> <span style="white-space: nowrap;">or go home</span></a>
-      {% if page.url !="/" %}
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="going-bg-nav">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      {% endif %}
-    </div>
 
     {% if page.url !="/" %}
+      <nav class="py-6">
+      <div class="container mx-auto">
+      <span class="font-medium text-slate-400 mr-2">/</span><a href="/" class="font-medium">Going.bg</a>
       <div id="going-bg-nav" class="navbar-menu">
         <div class="navbar-end">
-          <div class="navbar-item">
+          {# <div class="navbar-item">
             <a class="is-flex has-text-grey has-text-weight-medium" data-umami-event="tips" href="{{ '/posts/' | url }}"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/tips.png", "tips", "(min-width:30px) 50vw, 100vw", "", "lazy", "async" %}</figure>Tips</a>
             </div>
           <div class="navbar-item">
@@ -25,9 +16,10 @@
           </div>
           <div class="navbar-item">
             <a class="is-flex has-text-grey has-text-weight-medium" data-umami-event="email" href="mailto:christopher@going.bg"><figure class="image is-24x24 is-inline-block mr-3">{% image "./src/static/img/mail.png", "email", "(min-width:30px) 50vw, 100vw", "mail-icon", "lazy", "async" %}</figure>Email</a>
-          </div>
+          </div> #}
         </div>
       </div>
-    {% endif %}
-  </div>
+      </div>
 </nav>
+
+    {% endif %}

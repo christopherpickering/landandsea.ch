@@ -3,10 +3,10 @@ title: Introduction to Docker
 description: List of basic docker commands I'd like to remember.
 date: 2019-05-25
 tags:
-  - another tag
+  - docker
 ---
 
-<div class="notification">
+<div class="rounded border p-4 bg-white/80">
  👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
 </div>
 

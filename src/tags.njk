@@ -18,21 +18,20 @@ title: Tags
 description: List of tags used on Christopher's Tips.
 ---
 
-<section class="hero is-fullheight-with-navbar">
-  <div class="hero-body">
-    <div class="container">
-      <div class="level py-5">
-        <div class="columns is-vcentered">
-          <div class="column">
-            <h1 class="title is-3 has-text-weight-light">Tips Tagged “{{ tag }}”</h1>
+<section class="grow flex py-6">
+<div class="container mx-auto flex flex-col md:flex-row">
 
-            {% set postslist = collections[ tag ] %}
+        <div class="w-full md:w-2/3">
+                <h1 class="text-2xl font-light text-slate-800 flex items-center space-x-2">Tips Tagged “{{ tag }}”</h1>
+
+                {% set postslist = collections[ tag ] %}
             {% include "postslist.njk" %}
 
-            <p>See <a data-umami-event="tags-{{ tag }}" href="{{ '/posts/' | url }}">all</a>.</p>
+
+
+
+            <p><a href="{{ '/posts/' | url }}" class="text-blue-700">See all</a>.</p>
           </div>
-        </div>
+
       </div>
-    </div>
-  </div>
 </section>

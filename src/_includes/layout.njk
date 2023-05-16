@@ -24,18 +24,23 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
 
-    <!-- critical css is inlined, so we can async the rest -->
-    <link rel="preload" href="/static/css/site.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="/style.css?v={% version %}"/>
     {% jsonLdScript meta, type, tags %}
   </head>
   <body>
-    <section class="is-flex-grow-1">
-    <figure class="background">{% image "./src/static/img/bg.jpg", "location", "(min-width:600px) 50vw, 100vw", "", "eager", "auto" %}</figure>
-      {% include "nav.njk" %}
-        {% block body %}
-            {{ content | safe }}
-        {% endblock body %}
-    </section>
+
+  <section class="flex flex-col min-h-screen px-4">
+
+    {% include "nav.njk" %}
+      {% block body %}
+          {{ content | safe }}
+      {% endblock body %}
+  </section>
+  {# background image #}
+  <div class="-z-10 fixed top-0 bottom-0 min-h-screen min-w-full aspect-[4/3] opacity-20">{% image "./src/static/img/bg.jpg", "location", "(min-width:600px) 80vw, 100vw", "min-h-screen min-w-full aspect-[4/3]", "eager", "auto" %}</div>
+
+
     <script>(function(){var $navbarBurgers=Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'),0);$navbarBurgers.forEach(function(el){el.addEventListener('click',function(){var target=el.dataset.target;var $target=document.getElementById(target);el.classList.toggle('is-active');$target.classList.toggle('is-active')})});})();</script>
+
   </body>
 </html>

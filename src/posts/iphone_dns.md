@@ -8,7 +8,7 @@ tags:
   - network
 ---
 
-<div class="notification">
+<div class="rounded border p-4 bg-white/80">
  👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
 </div>
 
