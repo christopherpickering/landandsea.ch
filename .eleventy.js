@@ -195,7 +195,7 @@ module.exports = function (eleventyConfig) {
       data: '_data',
       output: '_site',
     },
-    templateFormats: ['md', 'html', 'njk', '11ty.js'],
+    templateFormats: ['md', 'html', 'njk', '11ty.js', 'MD'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     passthroughFileCopy: true,
