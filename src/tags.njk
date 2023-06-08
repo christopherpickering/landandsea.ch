@@ -22,7 +22,7 @@ description: List of tags used on Christopher's Tips.
 <div class="container mx-auto flex flex-col md:flex-row">
 
         <div class="w-full md:w-2/3">
-                <h1 class="text-2xl font-light text-slate-800 flex items-center space-x-2">Tips Tagged “{{ tag }}”</h1>
+               <div class="flex space-x-4"><a href="{{ '/posts/' | url }}" class="rounded-md bg-white/50 border px-2 m-1 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50 flex space-x-2 my-auto text-slate-600 hover:text-slate-900 transition-colors">{% include "src/_includes/svg/undo.html" %}<span>All Tips</span></a><h1 class="text-2xl font-light text-slate-800 flex items-center space-x-2">Tips Tagged “{{ tag }}”</h1></div>
 
                 {% set postslist = collections[ tag ] %}
             {% include "postslist.njk" %}
@@ -30,7 +30,7 @@ description: List of tags used on Christopher's Tips.
 
 
 
-            <p><a href="{{ '/posts/' | url }}" class="text-blue-700">See all</a>.</p>
+
           </div>
 
       </div>
