@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.73",
+  "version": "1.0.74",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "eleventy-plugin-metagen": "1.7.11",
     "html-minifier": "4.0.0",
     "lint-staged": "13.2.3",
-    "luxon": "3.3.0",
+    "luxon": "3.4.0",
     "markdown-it": "13.0.1",
     "markdown-it-anchor": "8.6.7",
     "markdown-it-div": "1.1.0",
