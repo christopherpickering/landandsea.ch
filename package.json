@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.79",
+  "version": "1.0.80",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,13 +24,13 @@
     "@quasibit/eleventy-plugin-schema": "1.11.0",
     "@toycode/markdown-it-class": "1.2.4",
     "autoprefixer": "10.4.15",
-    "axios": "1.4.0",
+    "axios": "1.5.0",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-plugin-metagen": "1.7.11",
     "html-minifier": "4.0.0",
     "lint-staged": "14.0.1",
-    "luxon": "3.4.1",
+    "luxon": "3.4.2",
     "markdown-it": "13.0.1",
     "markdown-it-anchor": "8.6.7",
     "markdown-it-div": "1.1.0",
