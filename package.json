@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.82",
+  "version": "1.0.83",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
-    "@11ty/eleventy-img": "3.1.0",
+    "@11ty/eleventy-img": "3.1.1",
     "@11ty/eleventy-navigation": "0.3.5",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
@@ -24,14 +24,14 @@
     "@quasibit/eleventy-plugin-schema": "1.11.0",
     "@toycode/markdown-it-class": "1.2.4",
     "autoprefixer": "10.4.16",
-    "axios": "1.5.0",
+    "axios": "1.5.1",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-plugin-metagen": "1.7.11",
     "html-minifier": "4.0.0",
     "lint-staged": "14.0.1",
     "luxon": "3.4.3",
-    "markdown-it": "13.0.1",
+    "markdown-it": "13.0.2",
     "markdown-it-anchor": "8.6.7",
     "markdown-it-div": "1.1.0",
     "markdown-it-imsize": "2.0.1",
