@@ -1,6 +1,6 @@
 {
   "name": "going-bg",
-  "version": "1.0.92",
+  "version": "1.0.93",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "html-minifier": "4.0.0",
     "lint-staged": "15.2.0",
     "luxon": "3.4.4",
-    "markdown-it": "13.0.2",
+    "markdown-it": "14.0.0",
     "markdown-it-anchor": "8.6.7",
     "markdown-it-div": "1.1.0",
     "markdown-it-imsize": "2.0.1",
