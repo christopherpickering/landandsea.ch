@@ -1,6 +1,6 @@
 const contextCondition = 'production';
 const stateCondition = 'ready';
-const sitemapUrl = 'https://www.going.bg/sitemap.xml';
+const sitemapUrl = 'https://www.landandsea.ch/sitemap.xml';
 
 const axios = require('axios');
 

@@ -1,4 +1,4 @@
-Sitemap: https://www.going.bg/sitemap.xml
+Sitemap: https://www.landandsea.ch/sitemap.xml
 
 User-agent: *
 Disallow:

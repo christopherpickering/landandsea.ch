@@ -962,7 +962,7 @@
       e.exports = require('events');
     },
     function (e, a, i) {
-      const n = 'https://www.going.bg/sitemap.xml',
+      const n = 'https://www.landandsea.ch/sitemap.xml',
         o = i(41);
       a.handler = async (e) => {
         try {
