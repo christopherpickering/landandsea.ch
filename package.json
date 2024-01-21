@@ -1,6 +1,6 @@
 {
   "name": "landandsea",
-  "version": "1.0.97",
+  "version": "1.0.98",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@quasibit/eleventy-plugin-schema": "1.11.0",
     "@toycode/markdown-it-class": "1.2.4",
-    "autoprefixer": "10.4.16",
+    "autoprefixer": "10.4.17",
     "axios": "1.6.5",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
