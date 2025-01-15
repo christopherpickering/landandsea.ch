@@ -21,12 +21,12 @@ We will do a few things:
 
 This guide assumes you have already installed `nginx`, `pm2`, and `certbot`.
 
-
 ### Create a `nginx` config
 
 First we will create a basic `nginx` config and get a certificate from certbot.
 
 We set to port 3000 initially, but you can put any number of port that is free. It will be changed later on.
+
 ```bash
 cat > /etc/nginx/sites-enabled/example.com.conf << EOF
 server {
@@ -59,7 +59,6 @@ cd /home/websites/example
 touch deploy.sh
 chmod +x deploy.sh
 ```
-
 
 Next we will add a few pieces to the `deploy.sh` script. You can use `nano deploy.sh` and just paste in the bits as we go.
 

@@ -23,11 +23,37 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    {% block scripts %}{% endblock scripts %}
+    <link rel="stylesheet" href="/static/css/style.css?v={% version %}"/>
+     <script>
+    // Remove this script if you don't need the dark mode toggle
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 
-    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+        document.documentElement.classList.add('dark')
+
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      const toggleDarkMode = function(){
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.theme = 'light';
+        } else {
+          document.documentElement.classList.add('dark')
+          localStorage.theme = 'dark'
+        }
+      };
+
+      const forgetPref = function(){
+        localStorage.removeItem('theme')
+        window.location.reload()
+      }
+      </script>
     {% jsonLdScript meta, type, tags %}
   </head>
-  <body>
+  <body class="dark:bg-zinc-800 dark:text-white">
 
   <section class="flex flex-col min-h-screen px-4">
 

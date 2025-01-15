@@ -7,10 +7,6 @@ tags:
   - web development
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 This tutorial was original made for a python static site generator. Since then, this site has moved to the [11ty ssg](https://www.11ty.dev). The original site can still be found [here](https://christopherpickering.github.io/old.christophers.tips.site/).
 
 This site can be made in a few simple steps -

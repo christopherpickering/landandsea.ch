@@ -8,10 +8,6 @@ tags:
   - gitea
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 ## Language Changes
 
 All language changes for keywords are in the i18n files. In our case we need to change the app_desc on the home page.

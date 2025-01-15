@@ -8,10 +8,6 @@ tags:
   - gitea
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 Special thanks to [Bryan Gilbert](https://bryangilbert.com/post/devops/how-to-setup-gitea-ubuntu/), whose tutorial this write up is based on.
 
 ## Create Git User

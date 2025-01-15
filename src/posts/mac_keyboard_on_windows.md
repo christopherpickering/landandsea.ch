@@ -6,10 +6,6 @@ tags:
   - windows
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 :::content
 
 1. Plug it in 😄

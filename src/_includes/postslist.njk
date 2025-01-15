@@ -2,7 +2,7 @@
   <ul reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
   {% for post in postslist | reverse %}
     <li class="my-1 flex items-center flex-wrap {% if post.url == url %} postlist-item-active{% endif %}">
-      <a href="{{ post.url | url }}" class="text-blue-700 mr-2">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      <a href="{{ post.url | url }}" class="text-blue-700 dark:text-blue-400 mr-2">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
       <time class="" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       {% if post.data.tags | filterTagList | length > 0 %}
         <div class="flex flex-wrap">

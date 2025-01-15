@@ -6,10 +6,6 @@ tags:
   - mac
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 ## Time Machine
 
 To add a size limit to time machine backups. Backup size should be around 1.5x the hard drive size.. so 500gb > 750gb > 750 x 1024 = 768000

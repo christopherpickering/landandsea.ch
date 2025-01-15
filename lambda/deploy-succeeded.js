@@ -342,8 +342,8 @@
           null != i.knownLength
             ? (n += +i.knownLength)
             : Buffer.isBuffer(a)
-            ? (n = a.length)
-            : 'string' == typeof a && (n = Buffer.byteLength(a)),
+              ? (n = a.length)
+              : 'string' == typeof a && (n = Buffer.byteLength(a)),
             (this._valueLength += n),
             (this._overheadLength +=
               Buffer.byteLength(e) + x.LINE_BREAK.length),
@@ -364,13 +364,13 @@
                     : ((o = n.size - (e.start ? e.start : 0)), a(null, o));
                 })
             : e.hasOwnProperty('httpVersion')
-            ? a(null, +e.headers['content-length'])
-            : e.hasOwnProperty('httpModule')
-            ? (e.on('response', function (i) {
-                e.pause(), a(null, +i.headers['content-length']);
-              }),
-              e.resume())
-            : a('Unknown stream');
+              ? a(null, +e.headers['content-length'])
+              : e.hasOwnProperty('httpModule')
+                ? (e.on('response', function (i) {
+                    e.pause(), a(null, +i.headers['content-length']);
+                  }),
+                  e.resume())
+                : a('Unknown stream');
         }),
         (x.prototype._multiPartHeader = function (e, a, i) {
           if ('string' == typeof i.header) return i.header;
@@ -397,10 +397,10 @@
             'string' == typeof a.filepath
               ? (i = s.normalize(a.filepath).replace(/\\/g, '/'))
               : a.filename || e.name || e.path
-              ? (i = s.basename(a.filename || e.name || e.path))
-              : e.readable &&
-                e.hasOwnProperty('httpVersion') &&
-                (i = s.basename(e.client._httpMessage.path || '')),
+                ? (i = s.basename(a.filename || e.name || e.path))
+                : e.readable &&
+                  e.hasOwnProperty('httpVersion') &&
+                  (i = s.basename(e.client._httpMessage.path || '')),
             i && (n = 'filename="' + i + '"'),
             n
           );
@@ -1319,9 +1319,9 @@
           'function' == typeof setImmediate
             ? setImmediate
             : 'object' == typeof process &&
-              'function' == typeof process.nextTick
-            ? process.nextTick
-            : null;
+                'function' == typeof process.nextTick
+              ? process.nextTick
+              : null;
         a ? a(e) : setTimeout(e, 0);
       };
     },
@@ -1667,8 +1667,10 @@
             ? Boolean(a.inspectOpts.colors)
             : n.isatty(process.stderr.fd);
         }),
-        (a.destroy = o.deprecate(() => {},
-        'Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.')),
+        (a.destroy = o.deprecate(
+          () => {},
+          'Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.',
+        )),
         (a.colors = [6, 2, 3, 4, 5, 1]);
       try {
         const e = i(38);
@@ -1774,10 +1776,10 @@
         return /-256(color)?$/i.test(t.TERM)
           ? 2
           : /^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(
-              t.TERM,
-            ) || 'COLORTERM' in t
-          ? 1
-          : i;
+                t.TERM,
+              ) || 'COLORTERM' in t
+            ? 1
+            : i;
       }
       s('no-color') || s('no-colors') || s('color=false') || s('color=never')
         ? (r = 0)
@@ -1788,10 +1790,10 @@
             'true' === t.FORCE_COLOR
               ? 1
               : 'false' === t.FORCE_COLOR
-              ? 0
-              : 0 === t.FORCE_COLOR.length
-              ? 1
-              : Math.min(parseInt(t.FORCE_COLOR, 10), 3)),
+                ? 0
+                : 0 === t.FORCE_COLOR.length
+                  ? 1
+                  : Math.min(parseInt(t.FORCE_COLOR, 10), 3)),
         (e.exports = {
           supportsColor: function (e) {
             return c(p(e, e && e.isTTY));
@@ -1926,10 +1928,10 @@
           'undefined' != typeof globalThis
             ? globalThis
             : 'undefined' != typeof self
-            ? self
-            : 'undefined' != typeof window
-            ? window
-            : global,
+              ? self
+              : 'undefined' != typeof window
+                ? window
+                : global,
         C = (e) => !u(e) && e !== E;
       const R =
         ((O = 'undefined' != typeof Uint8Array && s(Uint8Array)),
@@ -2016,10 +2018,10 @@
               h(i[s]) && h(n)
                 ? (i[s] = e(i[s], n))
                 : h(n)
-                ? (i[s] = e({}, n))
-                : l(n)
-                ? (i[s] = n.slice())
-                : (i[s] = n);
+                  ? (i[s] = e({}, n))
+                  : l(n)
+                    ? (i[s] = n.slice())
+                    : (i[s] = n);
             };
           for (let e = 0, a = arguments.length; e < a; e++)
             arguments[e] && j(arguments[e], n);
@@ -2391,8 +2393,8 @@
           ((s = o
             ? o(a, i)
             : B.isURLSearchParams(a)
-            ? a.toString()
-            : new Q(a, i).toString(n)),
+              ? a.toString()
+              : new Q(a, i).toString(n)),
           s)
         ) {
           const a = e.indexOf('#');
@@ -2637,8 +2639,8 @@
               ? B.isString(n)
                 ? -1 !== a.indexOf(n)
                 : B.isRegExp(n)
-                ? n.test(a)
-                : void 0
+                  ? n.test(a)
+                  : void 0
               : void 0);
       }
       class de {
@@ -2662,32 +2664,32 @@
             B.isPlainObject(e) || e instanceof this.constructor
               ? s(e, a)
               : B.isString(e) &&
-                (e = e.trim()) &&
-                !/^[-_a-zA-Z0-9^`|~,!#$%&'*+.]+$/.test(e.trim())
-              ? s(
-                  ((e) => {
-                    const a = {};
-                    let i, n, o;
-                    return (
-                      e &&
-                        e.split('\n').forEach(function (e) {
-                          (o = e.indexOf(':')),
-                            (i = e.substring(0, o).trim().toLowerCase()),
-                            (n = e.substring(o + 1).trim()),
-                            !i ||
-                              (a[i] && ce[i]) ||
-                              ('set-cookie' === i
-                                ? a[i]
-                                  ? a[i].push(n)
-                                  : (a[i] = [n])
-                                : (a[i] = a[i] ? a[i] + ', ' + n : n));
-                        }),
-                      a
-                    );
-                  })(e),
-                  a,
-                )
-              : null != e && o(a, e, i),
+                  (e = e.trim()) &&
+                  !/^[-_a-zA-Z0-9^`|~,!#$%&'*+.]+$/.test(e.trim())
+                ? s(
+                    ((e) => {
+                      const a = {};
+                      let i, n, o;
+                      return (
+                        e &&
+                          e.split('\n').forEach(function (e) {
+                            (o = e.indexOf(':')),
+                              (i = e.substring(0, o).trim().toLowerCase()),
+                              (n = e.substring(o + 1).trim()),
+                              !i ||
+                                (a[i] && ce[i]) ||
+                                ('set-cookie' === i
+                                  ? a[i]
+                                    ? a[i].push(n)
+                                    : (a[i] = [n])
+                                  : (a[i] = a[i] ? a[i] + ', ' + n : n));
+                          }),
+                        a
+                      );
+                    })(e),
+                    a,
+                  )
+                : null != e && o(a, e, i),
             this
           );
         }
@@ -3067,10 +3069,10 @@
         e.stream
           ? yield* e.stream()
           : e.arrayBuffer
-          ? yield await e.arrayBuffer()
-          : e[He]
-          ? yield* e[He]()
-          : yield e;
+            ? yield await e.arrayBuffer()
+            : e[He]
+              ? yield* e[He]()
+              : yield e;
       };
       const Je = B.ALPHABET.ALPHA_DIGIT + '-_',
         Ke = new Ce.TextEncoder(),
@@ -3101,7 +3103,7 @@
         static escapeName(e) {
           return String(e).replace(
             /[\r\n"]/g,
-            (e) => ({ '\r': '%0D', '\n': '%0A', '"': '%22' }[e]),
+            (e) => ({ '\r': '%0D', '\n': '%0A', '"': '%22' })[e],
           );
         }
       }
@@ -3437,11 +3439,11 @@
                 e.transport
                   ? (S = e.transport)
                   : 0 === e.maxRedirects
-                  ? (S = T ? Ee.a : je.a)
-                  : (e.maxRedirects && (O.maxRedirects = e.maxRedirects),
-                    e.beforeRedirect &&
-                      (O.beforeRedirects.config = e.beforeRedirect),
-                    (S = T ? na : ia)),
+                    ? (S = T ? Ee.a : je.a)
+                    : (e.maxRedirects && (O.maxRedirects = e.maxRedirects),
+                      e.beforeRedirect &&
+                        (O.beforeRedirects.config = e.beforeRedirect),
+                      (S = T ? na : ia)),
                 e.maxBodyLength > -1
                   ? (O.maxBodyLength = e.maxBodyLength)
                   : (O.maxBodyLength = 1 / 0),
@@ -3932,10 +3934,10 @@
           return B.isPlainObject(e) && B.isPlainObject(a)
             ? B.merge.call({ caseless: i }, e, a)
             : B.isPlainObject(a)
-            ? B.merge({}, a)
-            : B.isArray(a)
-            ? a.slice()
-            : a;
+              ? B.merge({}, a)
+              : B.isArray(a)
+                ? a.slice()
+                : a;
         }
         function o(e, a, i) {
           return B.isUndefined(a)
@@ -4218,8 +4220,8 @@
           this.reason
             ? e(this.reason)
             : this._listeners
-            ? this._listeners.push(e)
-            : (this._listeners = [e]);
+              ? this._listeners.push(e)
+              : (this._listeners = [e]);
         }
         unsubscribe(e) {
           if (!this._listeners) return;

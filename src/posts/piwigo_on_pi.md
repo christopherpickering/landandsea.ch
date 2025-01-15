@@ -1,13 +1,22 @@
 ---
 title: How To Run Piwigo on Raspberry Pi 2 W
 description: Running a home photo backup, Piwigo, on Raspberry Pi 2 W with docker-compose.
-date: 2024-9-5
+date: 2024-09-05
 tags:
   - Raspberry PI
   - docker
 ---
 
 This tutorial is how I set up Piwigo on a Raspberry PI 2 W to replace Google photos and Apple photos after running out of free space. I set it up with a 4tb external hard drive, planning to add a second drive as a backup.
+
+Be sure the usb drive has an external power source as the PI cannot power it while writing files.
+
+<div class="rounded border p-4 bg-white/80 dark:bg-white/10">
+ 👋 While this works, I ended up not using it as the PI was under powered for Piwigo. Also, Piwigo didn't find faces or auto tag.
+
+I switched to a 150$ Lenovo mini PC, running proxmox, and an ubuntu vm with immich as a picture manager.
+
+</div>
 
 ## Raspberry Pi 2 W
 
@@ -59,8 +68,6 @@ sudo systemctl daemon-reload
 # test
 sudo mount -a
 ```
-
-
 
 ## Add swap memory
 
@@ -134,13 +141,10 @@ services:
       - MYSQL_DATABASE=mysql
     volumes:
       - ./mysql:/config
-
 ```
 
 3. Start it up `sudo docker compose up`
 4. If no problems, run it as background `sudo docker compose up -d`
-
-
 
 ## Setting up Piwigo
 

@@ -7,10 +7,6 @@ tags:
   - windows
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 Nothing quite compares to Iterm2 + Oh My Zsh, but on a Windows 10 this is the best I am able to find. Here's a screenshot:
 
 {% image "./src/static/img/posts/cmder.png", "cmder", "(min-width:800px) 50vw, 100vw", "", "lazy", "async" %}

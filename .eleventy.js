@@ -9,6 +9,8 @@ const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const editOnGithub = require('eleventy-plugin-edit-on-github');
+const esbuild = require('esbuild');
+
 async function imageShortcode(
   src,
   alt,
@@ -17,14 +19,14 @@ async function imageShortcode(
   loading = 'lazy',
   decoding = 'async',
 ) {
-  let metadata = await Image(src, {
+  const metadata = await Image(src, {
     widths: [24, 300, 400, 500, 600, 800],
     formats: ['webp'],
     outputDir: './_site/static/img/',
     urlPath: '/static/img/',
   });
 
-  let imageAttributes = {
+  const imageAttributes = {
     class: cls,
     alt,
     sizes,
@@ -35,7 +37,17 @@ async function imageShortcode(
   return Image.generateHTML(metadata, imageAttributes);
 }
 
-module.exports = function (eleventyConfig) {
+module.exports = (eleventyConfig) => {
+  eleventyConfig.on('eleventy.before', async () => {
+    await esbuild.build({
+      entryPoints: ['src/static/js/index.js'],
+      bundle: true,
+      outfile: '_site/static/js/bundle.js',
+      sourcemap: true,
+      //target: ["chrome58", "firefox57", "safari11", "edge16"],
+    });
+  });
+
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addWatchTarget('./src/static/');
   eleventyConfig.addWatchTarget('./styles/global.css');
@@ -65,9 +77,7 @@ module.exports = function (eleventyConfig) {
     github_edit_wrapper: undefined, //ex: "<div stuff>${edit_on_github}</div>"
   });
 
-  eleventyConfig.addShortcode('version', function () {
-    return String(Date.now());
-  });
+  eleventyConfig.addShortcode('version', () => String(Date.now()));
   // copy font
   eleventyConfig.addPassthroughCopy({
     './node_modules/@fontsource/inter/files': 'static/font/inter/files',
@@ -85,6 +95,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     'src/favicon.ico': 'favicon.ico',
+  });
+
+  eleventyConfig.addFilter('old', (dateObj) => {
+    var oldDate = new Date(dateObj);
+    var todayDate = new Date();
+    return (todayDate - oldDate) / (1000 * 3600 * 24 * 365) > 1;
   });
 
   // https://github.com/11ty/eleventy-base-blog/blob/master/.eleventy.js
@@ -113,8 +129,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('filterTagList', filterTagList);
 
   // Create an array of all tags
-  eleventyConfig.addCollection('tagList', function (collection) {
-    let tagSet = new Set();
+  eleventyConfig.addCollection('tagList', (collection) => {
+    const tagSet = new Set();
     collection.getAll().forEach((item) => {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
@@ -135,12 +151,12 @@ module.exports = function (eleventyConfig) {
   });
 
   const mapping = {
-    h1: 'text-2xl font-light text-slate-800 py-3',
-    h2: 'text-xl font-light text-slate-800 py-3',
-    h3: 'text-lg font-light text-slate-800 py-3',
-    h4: 'font-light text-slate-800 py-3',
-    h5: 'font-light text-slate-800 py-3',
-    h6: 'font-light text-slate-800 py-3',
+    h1: 'text-2xl font-light text-slate-800 py-3 dark:text-slate-200',
+    h2: 'text-xl font-light text-slate-800 py-3 dark:text-slate-200',
+    h3: 'text-lg font-light text-slate-800 py-3 dark:text-slate-200',
+    h4: 'font-light text-slate-800 py-3 dark:text-slate-200',
+    h5: 'font-light text-slate-800 py-3 dark:text-slate-200',
+    h6: 'font-light text-slate-800 py-3 dark:text-slate-200',
     p: 'py-3',
     table: 'table',
     pre: 'rounded',
@@ -148,7 +164,7 @@ module.exports = function (eleventyConfig) {
   };
 
   // Customize Markdown library and settings:
-  let markdownLibrary = markdownIt({
+  const markdownLibrary = markdownIt({
     html: true,
     breaks: true,
     linkify: true,
@@ -157,7 +173,7 @@ module.exports = function (eleventyConfig) {
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.linkInsideHeader({
         placement: 'before',
-        class: 'text-blue-600',
+        class: 'text-blue-600 dark:text-blue-200',
         symbol: '∞',
         level: [2, 3, 4, 5],
       }),
@@ -172,7 +188,7 @@ module.exports = function (eleventyConfig) {
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
-      ready: function (err, browserSync) {
+      ready: (err, browserSync) => {
         const content_404 = fs.readFileSync('_site/404.html');
 
         browserSync.addMiddleware('*', (req, res) => {

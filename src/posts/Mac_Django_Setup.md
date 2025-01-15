@@ -8,10 +8,6 @@ tags:
   - mac
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 ## Create Python Working Environment
 
 ### Install Homebrew
@@ -103,7 +99,7 @@ cd testsite
 python manage.py startapp myapp
 ```
 
-To run code on mac. 
+To run code on mac.
 
 ```bash
 python manage.py runserver
@@ -175,6 +171,7 @@ python manage.py migrate
 ## Import MySQL Database From Server
 
 ### Dump the Dababase on the server.
+
 Login to the server, navigate to where you want to put the dump. Run this.
 
 ```bash
@@ -222,6 +219,7 @@ if settings.DEBUG == True:
 # Save project PIP requirements
 
 Activate the virtual environment and run this to create a listing of required modules.
+
 ```bash
 pip freeze > requirements.txt
 ```

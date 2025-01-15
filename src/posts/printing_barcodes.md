@@ -6,10 +6,6 @@ tags:
   - another tag
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 Code 39 is the easiest to use.
 
 The text in the barcode must start and end with a \*. So in excel

@@ -8,10 +8,6 @@ tags:
   - network
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 Why change it? There are several benefits to changing it!
 
 ::: content
@@ -52,11 +48,11 @@ After the first `<dict>` you can insert a DNS section (or edit if it is already 
 ```xml
 <key>DNS</key>
 <dict>
-	<key>ServerAddresses</key>
-	<array>
-	   <string>185.228.168.10</string>
-	   <string>185.228.168.11</string>
-	</array>
+  <key>ServerAddresses</key>
+  <array>
+     <string>185.228.168.10</string>
+     <string>185.228.168.11</string>
+  </array>
 </dict>
 ```
 

@@ -7,10 +7,6 @@ tags:
   - network
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 Why use a VPN? The VPN will keep your network traffic secure between you and the host and will make snooping very challenging. The downside of a VPN is that all traffic from your computer is routed to the VPN host and you loose access to servers/websites that are on the local network.
 
 These steps will help to make a VPN doable

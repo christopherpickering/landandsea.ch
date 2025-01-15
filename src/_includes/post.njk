@@ -6,7 +6,7 @@ templateClass: tmpl-post
 <section class="grow flex py-6">
   <div class="container mx-auto">
   <div class="flex justify-between pb-4">
-  <div class="flex space-x-4"><a href="{{ '/posts/' | url }}" class="rounded-md bg-white/50 border px-2 m-1 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50 flex space-x-2 my-auto text-slate-600 hover:text-slate-900 transition-colors">{% include "src/_includes/svg/undo.html" %}<span>All Tips</span></a><h1 class="text-2xl font-light text-slate-800 flex items-center space-x-2">{{ title }}</h1></div>
+  <div class="flex space-x-4"><a href="{{ '/posts/' | url }}" class="rounded-md bg-white/50 border px-2 m-1 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50 flex space-x-2 my-auto text-slate-600 hover:text-slate-900 transition-colors">{% include "src/_includes/svg/undo.html" %}<span>All Tips</span></a><h1 class="text-2xl font-light text-slate-800 dark:text-slate-200 flex items-center space-x-2">{{ title }}</h1></div>
 
 
     {% if tags | length > 0 %}
@@ -18,7 +18,11 @@ templateClass: tmpl-post
       </div>
     {% endif %}
     </div>
-    <time class="block mb-4 text-slate-600" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+    <time class="block mb-4 text-slate-600 dark:text-slate-200" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+
+    {% if date | old %}<div class="rounded border p-4 bg-white/80 dark:bg-white/10">
+ 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
+</div>{% endif %}
 
     {{ content | safe }}
 
@@ -28,8 +32,8 @@ templateClass: tmpl-post
       {%- if nextPost or previousPost %}
         <hr class="my-4">
         <ul>
-          {%- if nextPost %}<li>Next: <a class="text-blue-700" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-          {%- if previousPost %}<li>Previous: <a class="text-blue-700" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+          {%- if nextPost %}<li>Next: <a class="text-blue-700 dark:text-blue-300" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+          {%- if previousPost %}<li>Previous: <a class="text-blue-700 dark:text-blue-300" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
         </ul>
       {%- endif %}
     {%- endif %}

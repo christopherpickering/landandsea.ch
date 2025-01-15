@@ -8,10 +8,6 @@ tags:
   - web development
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 These steps are used on a MINIX PC with windows 10 pro installed.
 
 ## Install Latest UBUNTU

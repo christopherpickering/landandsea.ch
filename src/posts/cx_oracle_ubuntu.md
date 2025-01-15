@@ -8,10 +8,6 @@ tags:
   - database
 ---
 
-<div class="rounded border p-4 bg-white/80">
- 👋 Thanks for reading! Things have changed since this was written, take it with a grain of salt ;)
-</div>
-
 Further reading: [Cx_Oracle Docs](https://cx-oracle.readthedocs.io/en/latest/installation.html)
 
 ## Download Instant Client
