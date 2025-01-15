@@ -5,8 +5,8 @@ templateClass: tmpl-post
 
 <section class="grow flex py-6">
   <div class="container mx-auto">
-  <div class="flex justify-between pb-4">
-  <div class="flex space-x-4"><a href="{{ '/posts/' | url }}" class="rounded-md bg-white/50 border px-2 m-1 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50 flex space-x-2 my-auto text-slate-600 hover:text-slate-900 transition-colors">{% include "src/_includes/svg/undo.html" %}<span>All Tips</span></a><h1 class="text-2xl font-light text-slate-800 dark:text-slate-200 flex items-center space-x-2">{{ title }}</h1></div>
+  <div class="flex justify-between gap-4 pb-4 max-sm:flex-col flex-wrap">
+  <div class="flex flex-wrap gap-4 max-sm:flex-col"><a href="{{ '/posts/' | url }}" class="w-max whitespace-nowrap rounded-md bg-white/50 border px-2 m-1 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50 flex space-x-2 my-auto text-slate-600 hover:text-slate-900 transition-colors">{% include "src/_includes/svg/undo.html" %}<span>All Tips</span></a><h1 class="text-2xl font-light text-slate-800 dark:text-slate-200 flex items-center space-x-2">{{ title }}</h1></div>
 
 
     {% if tags | length > 0 %}

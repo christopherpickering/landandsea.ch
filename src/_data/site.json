@@ -1,11 +1,10 @@
 {
-  "title": "Hi, I'm Christopher Pickering",
-  "description": "Thanks for visiting my website! Data engineer & Full stack developer.",
+  "title": "landandsea.ch",
+  "description": "Thanks for visiting.",
   "url": "https://landandsea.ch",
   "language": "en",
-  "image": "static/img/me.jpg",
   "feed": {
-    "subtitle": "Thanks for visiting my website! Data engineer & Full stack developer.",
+    "subtitle": "Thanks for visiting.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://landandsea.ch"
@@ -13,9 +12,5 @@
   "jsonfeed": {
     "path": "/feed/feed.json",
     "url": "https://landandsea.ch/feed/feed.json"
-  },
-  "author": {
-    "name": "Christopher Pickering",
-    "url": "https://landandsea.ch/about-me/"
   }
 }

@@ -1,14 +1,14 @@
 
   <ul reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
   {% for post in postslist | reverse %}
-    <li class="my-1 flex items-center flex-wrap {% if post.url == url %} postlist-item-active{% endif %}">
+    <li class="my-1 flex max-sm:flex-col items-start md:items-center flex-wrap {% if post.url == url %} postlist-item-active{% endif %}">
       <a href="{{ post.url | url }}" class="text-blue-700 dark:text-blue-400 mr-2">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-      <time class="" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      <time class="mr-1" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       {% if post.data.tags | filterTagList | length > 0 %}
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap gap-1 mt-1 mb-2">
           {% for tag in post.data.tags | filterTagList | sort %}
             {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="rounded-md bg-white/50 border px-2 m-1 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50 text-slate-600 hover:text-slate-900 transition-colors" >{{ tag }}</a>
+            <a href="{{ tagUrl | url }}" class="rounded-md bg-white/50 border px-2 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-amber-500/50 text-slate-600 hover:text-slate-900 transition-colors flex-grow whitespace-nowrap" >{{ tag }}</a>
           {% endfor %}
         </div>
       {% endif %}

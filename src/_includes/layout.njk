@@ -6,23 +6,20 @@
         title=title or site.title,
         desc=desc or description  or site.description,
         url=site.url + page.url,
-        img=image or site.url + "/static/img/me.jpg",
-        img_alt=alt or "Christopher Pickering",
         twitter_card_type=type,
         twitter_handle=twitter,
         name="Christopher Pickering"
       %}
     {% endblock meta %}
     <meta property="og:locale" content="en_US" />
-    <meta property="article:author" content="Christopher Pickering" />
     <meta name="robots" content="index,follow" />
     <meta name="googlebot" content="index,follow" />
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="alternate" href="{{ site.feed.path | url }}" type="application/atom+xml" title="{{ site.title }}">
     <link rel="alternate" href="{{ site.jsonfeed.path | url }}" type="application/json" title="{{ site.title }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/roundlogo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/roundlogo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/roundlogo/favicon-16x16.png">
     {% block scripts %}{% endblock scripts %}
     <link rel="stylesheet" href="/static/css/style.css?v={% version %}"/>
      <script>
