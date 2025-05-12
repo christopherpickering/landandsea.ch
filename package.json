@@ -1,6 +1,6 @@
 {
   "name": "landandsea",
-  "version": "1.0.149",
+  "version": "1.0.150",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,10 +16,10 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "3.0.0",
-    "@11ty/eleventy-img": "6.0.2",
+    "@11ty/eleventy-img": "6.0.3",
     "@11ty/eleventy-navigation": "1.0.4",
     "@11ty/eleventy-plugin-rss": "1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.1",
     "@fullhuman/postcss-purgecss": "^7.0.0",
     "@quasibit/eleventy-plugin-schema": "1.11.1",
     "@toycode/markdown-it-class": "1.2.4",
