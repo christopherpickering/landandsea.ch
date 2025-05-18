@@ -1,6 +1,6 @@
 {
   "name": "landandsea",
-  "version": "1.0.150",
+  "version": "1.0.151",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
   "author": "Christopher Pickering",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0",
-    "@11ty/eleventy-img": "6.0.3",
+    "@11ty/eleventy": "3.1.0",
+    "@11ty/eleventy-img": "6.0.4",
     "@11ty/eleventy-navigation": "1.0.4",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.1",
