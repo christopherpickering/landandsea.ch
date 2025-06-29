@@ -1,6 +1,6 @@
 {
   "name": "landandsea",
-  "version": "1.0.156",
+  "version": "1.0.157",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -41,7 +41,7 @@
     "postcss": "^8.4.23",
     "postcss-cli": "^11.0.0",
     "postcss-nested": "7.0.2",
-    "prettier": "3.5.3",
+    "prettier": "3.6.1",
     "tailwindcss": "^3.3.2"
   },
   "lint-staged": {
