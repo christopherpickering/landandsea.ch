@@ -1,6 +1,6 @@
 {
   "name": "landandsea",
-  "version": "1.0.158",
+  "version": "1.0.159",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "esbuild": "^0.25.0",
     "html-minifier": "4.0.0",
     "lint-staged": "16.1.2",
-    "luxon": "3.6.1",
+    "luxon": "3.7.1",
     "markdown-it": "14.1.0",
     "markdown-it-anchor": "9.2.0",
     "markdown-it-div": "1.1.0",
