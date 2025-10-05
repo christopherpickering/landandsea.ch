@@ -1,6 +1,6 @@
 {
   "name": "landandsea",
-  "version": "1.0.168",
+  "version": "1.0.169",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "eleventy-plugin-metagen": "1.8.3",
     "esbuild": "^0.25.0",
     "html-minifier": "4.0.0",
-    "lint-staged": "16.2.1",
+    "lint-staged": "16.2.3",
     "luxon": "3.7.2",
     "markdown-it": "14.1.0",
     "markdown-it-anchor": "9.2.0",
